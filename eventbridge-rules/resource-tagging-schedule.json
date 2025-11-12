@@ -1,0 +1,12 @@
+{
+  "Name": "ResourceTaggingSchedule",
+  "Description": "Triggers resource tagging Lambda every day at 2 AM UTC",
+  "ScheduleExpression": "cron(0 2 * * ? *)",
+  "State": "ENABLED",
+  "Targets": [
+    {
+      "Arn": "arn:aws:lambda:ap-south-1:285168796340:function:resource-tagging",
+      "Id": "ResourceTaggingTarget"
+    }
+  ]
+}

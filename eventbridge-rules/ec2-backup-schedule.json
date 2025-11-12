@@ -1,0 +1,12 @@
+{
+  "Name": "EC2BackupSchedule",
+  "Description": "Triggers EC2 backup Lambda function every night at 1 AM UTC",
+  "ScheduleExpression": "cron(0 1 * * ? *)",
+  "State": "ENABLED",
+  "Targets": [
+    {
+      "Arn": "arn:aws:lambda:ap-south-1:285168796340:function:ec2-backup",
+      "Id": "EC2BackupTarget"
+    }
+  ]
+}

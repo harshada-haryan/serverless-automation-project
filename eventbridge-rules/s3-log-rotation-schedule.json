@@ -1,0 +1,12 @@
+{
+  "Name": "S3LogRotationSchedule",
+  "Description": "Triggers S3 log rotation Lambda every Monday at 4 AM UTC",
+  "ScheduleExpression": "cron(0 4 ? * MON *)",
+  "State": "ENABLED",
+  "Targets": [
+    {
+      "Arn": "arn:aws:lambda:ap-south-1:285168796340:function:s3-log-rotation",
+      "Id": "S3LogRotationTarget"
+    }
+  ]
+}

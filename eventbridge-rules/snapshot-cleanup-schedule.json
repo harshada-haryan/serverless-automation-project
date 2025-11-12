@@ -1,0 +1,12 @@
+{
+  "Name": "SnapshotCleanupSchedule",
+  "Description": "Triggers snapshot cleanup Lambda every Sunday at 3 AM UTC",
+  "ScheduleExpression": "cron(0 3 ? * SUN *)",
+  "State": "ENABLED",
+  "Targets": [
+    {
+      "Arn": "arn:aws:lambda:ap-south-1:285168796340:function:snapshot-cleanup",
+      "Id": "SnapshotCleanupTarget"
+    }
+  ]
+}
