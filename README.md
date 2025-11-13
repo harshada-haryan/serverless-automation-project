@@ -61,10 +61,9 @@ Lambda Functions
 Purpose: Creates automated snapshots of tagged EC2 volumes
 Trigger: EventBridge (Daily at 2:00 AM UTC)
 Key Operations:
-
-Identifies EC2 volumes with specific tags
-Creates snapshots with descriptive names
-Adds metadata tags to snapshots
+**Identifies EC2 volumes with specific tags
+**Creates snapshots with descriptive names
+**Adds metadata tags to snapshots
 <img width="1916" height="853" alt="lambda function-ec2 backup" src="https://github.com/user-attachments/assets/d01bf57f-6998-460e-b205-e7a6d7c4b6ad" />
 
 EC2 Backup Lambda function configuration
