@@ -32,9 +32,8 @@ serverless-automation-project/
 │   ├── snapshot-cleanup-schedule.json
 │   ├── resource-tagging-schedule.json
 │   └── s3-log-rotation-schedule.json
-├── screenshots/
-│   └── [All project screenshots]
-└── README.md
+├── README.md
+
 
 ```
 
@@ -78,13 +77,12 @@ This project includes 4 Lambda functions for different automation tasks:
 - Creates snapshots with descriptive names
 - Adds metadata tags to snapshots
 
+*EC2 Backup Lambda function configuration showing runtime and handler settings*
 <img width="1916" height="853" alt="lambda function-ec2 backup" src="https://github.com/user-attachments/assets/5e2b6e72-8131-41ed-adcd-f595358ebbc2" />
 
-*EC2 Backup Lambda function configuration showing runtime and handler settings*
-
-<img width="1917" height="902" alt="IAM-ec2-backup" src="https://github.com/user-attachments/assets/fb7ee765-a000-444d-9026-198eeef81191" />
 
 *IAM role with necessary permissions for EC2 snapshot operations*
+<img width="1917" height="902" alt="IAM-ec2-backup" src="https://github.com/user-attachments/assets/fb7ee765-a000-444d-9026-198eeef81191" />
 
 ---
 
