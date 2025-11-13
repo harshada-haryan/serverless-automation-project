@@ -77,11 +77,11 @@ This project includes 4 Lambda functions for different automation tasks:
 - Creates snapshots with descriptive names
 - Adds metadata tags to snapshots
 
-## EC2 Backup Lambda function configuration showing runtime and handler settings
+**EC2 Backup Lambda function configuration showing runtime and handler settings**
 <img width="1916" height="853" alt="lambda function-ec2 backup" src="https://github.com/user-attachments/assets/5e2b6e72-8131-41ed-adcd-f595358ebbc2" />
 
 
-## IAM role with necessary permissions for EC2 snapshot operations
+**IAM role with necessary permissions for EC2 snapshot operations**
 <img width="1917" height="902" alt="IAM-ec2-backup" src="https://github.com/user-attachments/assets/fb7ee765-a000-444d-9026-198eeef81191" />
 
 ---
@@ -97,17 +97,18 @@ This project includes 4 Lambda functions for different automation tasks:
 - Identifies snapshots older than 30 days
 - Deletes qualifying snapshots automatically
 
+**Snapshot cleanup Lambda function**
 <img width="1919" height="908" alt="lambda function-snapshot-cleanup" src="https://github.com/user-attachments/assets/4917e5c8-0cec-4097-b694-08a65ae25b76" />
 
-*Snapshot cleanup Lambda function*
 
+**IAM role for snapshot deletion operations**
 <img width="1918" height="906" alt="IAM-snapshot-cleanup" src="https://github.com/user-attachments/assets/feb6241f-fada-45f3-90c3-9a0538c21f69" />
 
-*IAM role for snapshot deletion operations*
 
+**CloudWatch logs showing snapshot cleanup execution history**
 <img width="1917" height="908" alt="cloudwatch snapshot-cleanup" src="https://github.com/user-attachments/assets/5a5d85cc-9150-4c33-a8ce-aa159ea74cad" />
 
-*CloudWatch logs showing snapshot cleanup execution history*
+
 
 ---
 
@@ -122,17 +123,18 @@ This project includes 4 Lambda functions for different automation tasks:
 - Applies tags based on naming patterns
 - Ensures compliance with tagging policies
 
+**Resource tagging automation function configuration**
 <img width="1914" height="903" alt="lambda function-resource-tagging" src="https://github.com/user-attachments/assets/4490bf96-87d4-4a20-b033-39dd323d293c" />
 
-*Resource tagging automation function configuration*
 
+
+**IAM role with permissions for resource tagging operations**
 <img width="1919" height="912" alt="IAM-resource-tagging" src="https://github.com/user-attachments/assets/4e07444a-ecc2-4f28-9ef8-35e46cd6969b" />
 
-*IAM role with permissions for resource tagging operations*
 
+**Successfully tagged resources in AWS Console**
 <img width="1919" height="907" alt="cloud resource-tagging" src="https://github.com/user-attachments/assets/dd55e304-cca1-4f32-b37d-869306f3a14d" />
 
-*Successfully tagged resources in AWS Console*
 
 ---
 
@@ -147,17 +149,18 @@ This project includes 4 Lambda functions for different automation tasks:
 - Transitions old logs to cheaper storage classes
 - Archives or deletes logs based on retention rules
 
+**S3 log rotation Lambda function**
 <img width="1919" height="909" alt="lambda function-s3-log-rotation" src="https://github.com/user-attachments/assets/7a562e70-f440-4d18-992e-18c553c8cf97" />
 
-*S3 log rotation Lambda function*
 
+**IAM role for S3 lifecycle management**
 <img width="1919" height="907" alt="IAM-s3-log-rotation" src="https://github.com/user-attachments/assets/3db51aa5-b97c-4536-935f-9ecc7d345b1d" />
 
-*IAM role for S3 lifecycle management*
 
+**S3 bucket lifecycle configuration applied by the function**
 <img width="1919" height="911" alt="cloud s3-log-rotation" src="https://github.com/user-attachments/assets/eed02622-48ad-4dfe-8ab6-2f95875b4c68" />
 
-*S3 bucket lifecycle configuration applied by the function*
+
 
 ---
 
@@ -165,47 +168,50 @@ This project includes 4 Lambda functions for different automation tasks:
 
 ### EventBridge Rules Dashboard
 
+**EventBridge rules overview showing all scheduled automations**
 <img width="1919" height="912" alt="AWS eventbridge dashboard" src="https://github.com/user-attachments/assets/f40dc4ca-b655-4c92-ac0f-e8a029be62ea" />
 
-*EventBridge rules overview showing all scheduled automations*
 
 ---
 
 ### Individual Schedule Configurations
 
 #### EC2 Backup Schedule
-**Cron Expression:** `cron(0 2 * * ? *)` (Daily at 2:00 AM UTC)
-
-<img width="1919" height="906" alt="eventbridge-ec2-backup-schedule" src="https://github.com/user-attachments/assets/d0648b2c-6345-4a2b-a444-9bf315fccfba" />
+**Cron Expression:** `cron(0 1 * * ? *)` (Daily at 1:00 AM UTC)
 
 *Nightly EC2 volume backup schedule configuration*
+<img width="1919" height="906" alt="eventbridge-ec2-backup-schedule" src="https://github.com/user-attachments/assets/d0648b2c-6345-4a2b-a444-9bf315fccfba" />
+
+
 
 ---
 
 #### Snapshot Cleanup Schedule
-**Cron Expression:** `cron(0 3 * * ? *)` (Daily at 3:00 AM UTC)
-
-<img width="1918" height="911" alt="eventbridge-snapshot-cleanup-schedule" src="https://github.com/user-attachments/assets/d5e4a2ce-10b7-4466-9def-25a5d994783a" />
+**Cron Expression:** `cron(0 3 ? *SUN*)` (every sunday at 3:00 AM UTC)
 
 *Daily snapshot cleanup schedule*
+<img width="1918" height="911" alt="eventbridge-snapshot-cleanup-schedule" src="https://github.com/user-attachments/assets/d5e4a2ce-10b7-4466-9def-25a5d994783a" />
+
 
 ---
 
 #### Resource Tagging Schedule
-**Cron Expression:** `cron(0 */6 * * ? *)` (Every 6 hours)
-
-<img width="1919" height="912" alt="eventbridge-resource-tagging-schedule" src="https://github.com/user-attachments/assets/bcd9c4cf-ebed-4849-87e4-850d0faf82c3" />
+**Cron Expression:** `cron(0 2 * * ? *)` ((Daily at 2:00 AM UTC)
 
 *Periodic resource tagging schedule*
+<img width="1919" height="912" alt="eventbridge-resource-tagging-schedule" src="https://github.com/user-attachments/assets/bcd9c4cf-ebed-4849-87e4-850d0faf82c3" />
+
+
 
 ---
 
 #### S3 Log Rotation Schedule
-**Cron Expression:** `cron(0 1 * * ? *)` (Daily at 1:00 AM UTC)
-
-<img width="1913" height="902" alt="eventbridge-s3-log-rotation-schedule" src="https://github.com/user-attachments/assets/31b482ff-7b93-4230-ade8-5e0bb5c3943c" />
+**Cron Expression:** `cron(0 4 ? 8MON *)` (every monday at 4:00 AM UTC)
 
 *Daily S3 log rotation schedule*
+<img width="1913" height="902" alt="eventbridge-s3-log-rotation-schedule" src="https://github.com/user-attachments/assets/31b482ff-7b93-4230-ade8-5e0bb5c3943c" />
+
+
 
 ---
 
