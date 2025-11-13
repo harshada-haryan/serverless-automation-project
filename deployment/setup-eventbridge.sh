@@ -18,7 +18,7 @@ FUNCTIONS=(
 for FUNC in "${!FUNCTIONS[@]}"; do
   RULE_FILE="${EVENT_PATH}/${FUNC}-schedule.json"
   RULE_NAME="${FUNCTIONS[$FUNC]}"
-  LAMBDA_ARN="arn:aws:lambda:${REGION}:${ACCOUNT_ID}:function:${FUNC}"
+  LAMBDA_ARN="arn:aws:lambda:${REGION}:${ACCOUNT_ID}:functions:${FUNC}"
 
   echo "Creating EventBridge rule: ${RULE_NAME}"
   SCHEDULE=$(jq -r '.ScheduleExpression' "${RULE_FILE}")
