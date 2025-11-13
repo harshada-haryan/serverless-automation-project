@@ -34,29 +34,27 @@ for FUNC in "${LAMBDA_FUNCTIONS[@]}"; do
   echo "📦 Packaging Lambda: ${FUNC}"
   cd lambda-functions/${FUNC}
   zip -r ${FUNC}.zip . >/dev/null
+  cd ../..
 
   ROLE_ARN="arn:aws:iam::${ACCOUNT_ID}:role/${FUNC}-role"
 
-  echo "🚀 Deploying Lambda: ${FUNC}"
-  aws lambda create-functions \
-    --functions-name ${FUNC} \
+  echo "-------------------------------------------"
+  echo "🧹 Deleting old Lambda (if exists): ${FUNC}"
+  echo "-------------------------------------------"
+  aws lambda delete-function --function-name ${FUNC} --region ${REGION} 2>/dev/null || true
+
+  echo "🚀 Creating new Lambda: ${FUNC}"
+  aws lambda create-function \
+    --function-name ${FUNC} \
     --runtime python3.9 \
     --role ${ROLE_ARN} \
-    --handler lambda_functions.lambda_handler \
-    --zip-file fileb://${FUNC}.zip \
+    --handler lambda_function.lambda_handler \
+    --zip-file fileb://lambda-functions/${FUNC}/${FUNC}.zip \
     --region ${REGION} \
     --timeout 900 \
-    --memory-size 256 \
-    || {
-      echo "⚠️ Lambda already exists, updating code..."
-      aws lambda update-functions-code \
-        --functions-name ${FUNC} \
-        --zip-file fileb://${FUNC}.zip \
-        --region ${REGION}
-    }
+    --memory-size 256
 
-  echo "✅ Lambda functions ${FUNC} deployed successfully."
-  cd ../..
+  echo "✅ Lambda function '${FUNC}' deployed successfully."
 done
 
 # 3️⃣ Set up EventBridge Rules
