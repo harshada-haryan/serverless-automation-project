@@ -61,7 +61,8 @@ serverless-automation-project/
 
 This project includes 4 Lambda functions for different automation tasks:
 
-![Lambda Functions Dashboard](screenshots/AWS-lambda-dashboard.png)
+<img width="1919" height="893" alt="AWS lambda dashboard" src="https://github.com/user-attachments/assets/59d66af1-4679-4426-aec1-9d121efa7d3a" />
+
 *Overview of all deployed Lambda functions in AWS Console*
 
 ---
@@ -77,10 +78,12 @@ This project includes 4 Lambda functions for different automation tasks:
 - Creates snapshots with descriptive names
 - Adds metadata tags to snapshots
 
-![Lambda Function - EC2 Backup](screenshots/lambda-function-ec2-backup.png)
+<img width="1916" height="853" alt="lambda function-ec2 backup" src="https://github.com/user-attachments/assets/5e2b6e72-8131-41ed-adcd-f595358ebbc2" />
+
 *EC2 Backup Lambda function configuration showing runtime and handler settings*
 
-![IAM Role - EC2 Backup](screenshots/IAM-ec2-backup.png)
+<img width="1917" height="902" alt="IAM-ec2-backup" src="https://github.com/user-attachments/assets/fb7ee765-a000-444d-9026-198eeef81191" />
+
 *IAM role with necessary permissions for EC2 snapshot operations*
 
 ---
@@ -96,13 +99,16 @@ This project includes 4 Lambda functions for different automation tasks:
 - Identifies snapshots older than 30 days
 - Deletes qualifying snapshots automatically
 
-![Lambda Function - Snapshot Cleanup](screenshots/lambda-function-snapshot-cleanup.png)
+<img width="1919" height="908" alt="lambda function-snapshot-cleanup" src="https://github.com/user-attachments/assets/4917e5c8-0cec-4097-b694-08a65ae25b76" />
+
 *Snapshot cleanup Lambda function*
 
-![IAM Role - Snapshot Cleanup](screenshots/IAM-snapshot-cleanup.png)
+<img width="1918" height="906" alt="IAM-snapshot-cleanup" src="https://github.com/user-attachments/assets/feb6241f-fada-45f3-90c3-9a0538c21f69" />
+
 *IAM role for snapshot deletion operations*
 
-![CloudWatch Snapshots](screenshots/cloudwatch-snapshots.png)
+<img width="1917" height="908" alt="cloudwatch snapshot-cleanup" src="https://github.com/user-attachments/assets/5a5d85cc-9150-4c33-a8ce-aa159ea74cad" />
+
 *CloudWatch logs showing snapshot cleanup execution history*
 
 ---
@@ -118,13 +124,16 @@ This project includes 4 Lambda functions for different automation tasks:
 - Applies tags based on naming patterns
 - Ensures compliance with tagging policies
 
-![Lambda Function - Resource Tagging](screenshots/lambda-function-resource-tagging.png)
+<img width="1914" height="903" alt="lambda function-resource-tagging" src="https://github.com/user-attachments/assets/4490bf96-87d4-4a20-b033-39dd323d293c" />
+
 *Resource tagging automation function configuration*
 
-![IAM Role - Resource Tagging](screenshots/IAM-resource-tagging.png)
+<img width="1919" height="912" alt="IAM-resource-tagging" src="https://github.com/user-attachments/assets/4e07444a-ecc2-4f28-9ef8-35e46cd6969b" />
+
 *IAM role with permissions for resource tagging operations*
 
-![Cloud Resource Tagging](screenshots/cloud-resource-tagging.png)
+<img width="1919" height="907" alt="cloud resource-tagging" src="https://github.com/user-attachments/assets/dd55e304-cca1-4f32-b37d-869306f3a14d" />
+
 *Successfully tagged resources in AWS Console*
 
 ---
@@ -140,13 +149,16 @@ This project includes 4 Lambda functions for different automation tasks:
 - Transitions old logs to cheaper storage classes
 - Archives or deletes logs based on retention rules
 
-![Lambda Function - S3 Log Rotation](screenshots/lambda-function-s3-log-rotation.png)
+<img width="1919" height="909" alt="lambda function-s3-log-rotation" src="https://github.com/user-attachments/assets/7a562e70-f440-4d18-992e-18c553c8cf97" />
+
 *S3 log rotation Lambda function*
 
-![IAM Role - S3 Log Rotation](screenshots/IAM-s3-log-rotation.png)
+<img width="1919" height="907" alt="IAM-s3-log-rotation" src="https://github.com/user-attachments/assets/3db51aa5-b97c-4536-935f-9ecc7d345b1d" />
+
 *IAM role for S3 lifecycle management*
 
-![Cloud S3 Log Rotation](screenshots/cloud-s3-log-rotation.png)
+<img width="1919" height="911" alt="cloud s3-log-rotation" src="https://github.com/user-attachments/assets/eed02622-48ad-4dfe-8ab6-2f95875b4c68" />
+
 *S3 bucket lifecycle configuration applied by the function*
 
 ---
@@ -155,7 +167,8 @@ This project includes 4 Lambda functions for different automation tasks:
 
 ### EventBridge Rules Dashboard
 
-![EventBridge Dashboard](screenshots/AWS-eventbridge-dashboard.png)
+<img width="1919" height="912" alt="AWS eventbridge dashboard" src="https://github.com/user-attachments/assets/f40dc4ca-b655-4c92-ac0f-e8a029be62ea" />
+
 *EventBridge rules overview showing all scheduled automations*
 
 ---
@@ -165,7 +178,8 @@ This project includes 4 Lambda functions for different automation tasks:
 #### EC2 Backup Schedule
 **Cron Expression:** `cron(0 2 * * ? *)` (Daily at 2:00 AM UTC)
 
-![EventBridge - EC2 Backup](screenshots/eventbridge-ec2-backup.png)
+<img width="1919" height="906" alt="eventbridge-ec2-backup-schedule" src="https://github.com/user-attachments/assets/d0648b2c-6345-4a2b-a444-9bf315fccfba" />
+
 *Nightly EC2 volume backup schedule configuration*
 
 ---
@@ -173,7 +187,8 @@ This project includes 4 Lambda functions for different automation tasks:
 #### Snapshot Cleanup Schedule
 **Cron Expression:** `cron(0 3 * * ? *)` (Daily at 3:00 AM UTC)
 
-![EventBridge - Snapshot Cleanup](screenshots/eventbridge-snapshot-cleanup.png)
+<img width="1918" height="911" alt="eventbridge-snapshot-cleanup-schedule" src="https://github.com/user-attachments/assets/d5e4a2ce-10b7-4466-9def-25a5d994783a" />
+
 *Daily snapshot cleanup schedule*
 
 ---
@@ -181,7 +196,8 @@ This project includes 4 Lambda functions for different automation tasks:
 #### Resource Tagging Schedule
 **Cron Expression:** `cron(0 */6 * * ? *)` (Every 6 hours)
 
-![EventBridge - Resource Tagging](screenshots/eventbridge-resource-tagging.png)
+<img width="1919" height="912" alt="eventbridge-resource-tagging-schedule" src="https://github.com/user-attachments/assets/bcd9c4cf-ebed-4849-87e4-850d0faf82c3" />
+
 *Periodic resource tagging schedule*
 
 ---
@@ -189,7 +205,8 @@ This project includes 4 Lambda functions for different automation tasks:
 #### S3 Log Rotation Schedule
 **Cron Expression:** `cron(0 1 * * ? *)` (Daily at 1:00 AM UTC)
 
-![EventBridge - S3 Log Rotation](screenshots/eventbridge-s3-log-rotation.png)
+<img width="1913" height="902" alt="eventbridge-s3-log-rotation-schedule" src="https://github.com/user-attachments/assets/31b482ff-7b93-4230-ade8-5e0bb5c3943c" />
+
 *Daily S3 log rotation schedule*
 
 ---
@@ -198,7 +215,8 @@ This project includes 4 Lambda functions for different automation tasks:
 
 ### IAM Roles Dashboard
 
-![IAM Roles Overview](screenshots/IAM-roles-dashboard.png)
+<img width="1918" height="911" alt="IAM roles dashboard" src="https://github.com/user-attachments/assets/75725056-1d72-4625-8d91-1fe88d8d546d" />
+
 *Overview of all Lambda execution roles with attached policies*
 
 ---
@@ -220,14 +238,16 @@ Each Lambda function has a dedicated IAM role following the principle of least p
 
 ### CloudWatch Dashboard
 
-![CloudWatch Dashboard](screenshots/AWS-cloudwatch-dashboard.png)
+<img width="1919" height="908" alt="AWS cloudwatch dashboard" src="https://github.com/user-attachments/assets/f15c654d-ca24-4637-8d2e-6b47b54c0ea1" />
+
 *Central monitoring dashboard for all Lambda functions showing invocations, errors, and duration*
 
 ---
 
 ### CloudWatch Logs - EC2 Backup
 
-![CloudWatch EC2 Backup Logs](screenshots/cloudwatch-ec2-backup-logs.png)
+<img width="1919" height="909" alt="cloudwatch ec2-backup" src="https://github.com/user-attachments/assets/d5092744-96b1-4b04-ba06-8968319326a5" />
+
 *Execution logs showing successful backup operations with snapshot IDs and timestamps*
 
 ---
@@ -236,7 +256,8 @@ Each Lambda function has a dedicated IAM role following the principle of least p
 
 ### AWS CLI Configuration
 
-![AWS Configure](screenshots/aws-configure.png)
+<img width="878" height="104" alt="aws configure" src="https://github.com/user-attachments/assets/16510390-3db5-4ab6-8e11-42c3171e6109" />
+
 *AWS CLI configuration used for deployment*
 
 ---
@@ -245,7 +266,8 @@ Each Lambda function has a dedicated IAM role following the principle of least p
 
 ### Deployment Overview
 
-![Deploy All Components](screenshots/deploy-all.png)
+<img width="1280" height="627" alt="deploy all" src="https://github.com/user-attachments/assets/a74bd2a3-7fff-4587-bbf9-ee1b0e89cec7" />
+
 *Complete deployment showing all Lambda functions, IAM roles, and EventBridge rules*
 
 ---
@@ -298,17 +320,15 @@ cd capstone-project-3
 aws configure
 # Enter your AWS Access Key ID
 # Enter your AWS Secret Access Key
-# Default region: us-east-1
+# Default region: ap-south-1
 # Default output format: json
 ```
 
-![AWS Configuration](screenshots/aws-configure.png)
-*AWS CLI configuration setup*
 
 #### Step 3: Update Configuration (Optional)
 Edit `deploy-all.sh` and update the following variables if needed:
 ```bash
-AWS_REGION="us-east-1"
+AWS_REGION="ap-south-1"
 ACCOUNT_ID="YOUR_ACCOUNT_ID"  # Replace with your AWS Account ID
 ```
 
@@ -321,8 +341,6 @@ chmod +x deploy-all.sh
 ```bash
 ./deploy-all.sh
 ```
-
-![Deploy All](screenshots/deploy-all.png)
 *Automated deployment script in action*
 
 **The script will automatically:**
