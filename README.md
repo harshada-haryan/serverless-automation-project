@@ -70,7 +70,7 @@ This project includes 4 Lambda functions for different automation tasks:
 
 **Purpose:** Creates automated snapshots of tagged EC2 volumes
 
-**Trigger:** EventBridge (Daily at 2:00 AM UTC)
+**Trigger:** EventBridge (Daily at 1:00 AM UTC)
 
 **Key Operations:**
 - Identifies EC2 volumes with specific tags
@@ -90,7 +90,7 @@ This project includes 4 Lambda functions for different automation tasks:
 
 **Purpose:** Removes outdated EBS snapshots to optimize costs
 
-**Trigger:** EventBridge (Daily at 3:00 AM UTC)
+**Trigger:** EventBridge (every sunday at 3:00 AM UTC)
 
 **Key Operations:**
 - Scans all EBS snapshots
@@ -116,7 +116,7 @@ This project includes 4 Lambda functions for different automation tasks:
 
 **Purpose:** Applies consistent tags based on naming conventions
 
-**Trigger:** EventBridge (Every 6 hours)
+**Trigger:** EventBridge (Daily at 2:00 AM UTC)
 
 **Key Operations:**
 - Scans untagged resources
@@ -142,7 +142,7 @@ This project includes 4 Lambda functions for different automation tasks:
 
 **Purpose:** Manages log lifecycle in S3 buckets
 
-**Trigger:** EventBridge (Daily at 1:00 AM UTC)
+**Trigger:** EventBridge (every monday at 4:00 AM UTC)
 
 **Key Operations:**
 - Applies lifecycle policies to log buckets
