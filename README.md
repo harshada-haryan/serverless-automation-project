@@ -30,16 +30,16 @@ serverless-automation-project/
 │   └── snapshot-cleanup-policy.json
 ├── lambda-functions/                 # Lambda source code for each automation task
 │   ├── ec2-backup/
-│   │   ├── ec2-backup.zip
 │   │   └── lambda-functions.py
+│   │  
 │   ├── resource-tagging/
 │   │   └── lambda-functions.py
 │   ├── s3-log-rotation/
-│   │   ├── lambda-functions.py
-│   │   └── output.json
+│   │   └── lambda-functions.py
+│   │  
 │   └── snapshot-cleanup/
 │       └── lambda-functions.py
-└── screenshots/                      # Screenshots for documentation and presentation
+
 ```
 
 ---
