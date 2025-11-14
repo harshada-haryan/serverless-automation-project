@@ -89,7 +89,7 @@ This project includes 4 Lambda functions for different automation tasks:
 **IAM role with necessary permissions for EC2 snapshot operations**
 <img width="1917" height="902" alt="IAM-ec2-backup" src="https://github.com/user-attachments/assets/fb7ee765-a000-444d-9026-198eeef81191" />
 
-*Cloudwatch logs showing successful backup operations with snapshot IDs and timestamps*
+**Cloudwatch logs showing successful backup operations with snapshot IDs and timestamps**
 <img width="1919" height="909" alt="cloudwatch ec2-backup" src="https://github.com/user-attachments/assets/d5092744-96b1-4b04-ba06-8968319326a5" />
 
 
