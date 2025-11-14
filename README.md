@@ -280,23 +280,23 @@ Each Lambda function has a dedicated IAM role following the principle of least p
 
 ## 💰 Cost Optimization Impact
 
-### Before Implementation
-- **EBS Snapshot Storage:** ~500 GB of old snapshots
-- **S3 Log Storage:** ~2 TB in Standard storage class
-- **Manual Operations:** 10 hours/month of engineer time
-- **Estimated Monthly Cost:** $125/month
+### Before Automation
+- **EBS Snapshots:** 500 GB (many old backups)  
+- **S3 Logs:** 2 TB in Standard storage  
+- **Manual Work:** 10 hours/month by engineers  
+- **Estimated Cost:** ~$125/month  
 
-### After Implementation
-- **EBS Snapshot Storage:** ~150 GB (70% reduction)
-- **S3 Log Storage:** 500 GB Standard, 1.5 TB in Glacier
-- **Lambda Execution Cost:** ~$2/month
-- **Automated Operations:** 0 manual hours
-- **Estimated Monthly Cost:** $45/month
+### After Automation
+- **EBS Snapshots:** Reduced to 150 GB → saves space  
+- **S3 Logs:** 500 GB in Standard + 1.5 TB in Glacier → cheaper storage  
+- **Automation:** Lambda functions handle tasks → almost no manual work  
+- **Estimated Cost:** ~$45/month  
 
-### Cost Savings
-- **Direct Savings:** $80/month ($960/year)
-- **Operational Efficiency:** 10 hours/month recovered
-- **ROI:** 94% cost reduction in infrastructure costs
+### Savings
+- **Money Saved:** $80/month (~$960/year)  
+- **Time Saved:** 10 hours/month  
+- **ROI:** ~70–75% cost reduction
+
 
 ---
 
