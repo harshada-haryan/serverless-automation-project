@@ -22,7 +22,6 @@ serverless-automation-project/
 │   └── s3-log-rotation/
 │       └── lambda_function.py
 ├── iam-roles/
-│   ├── lambda-execution-role.json
 │   ├── ec2-backup-policy.json
 │   ├── snapshot-cleanup-policy.json
 │   ├── resource-tagging-policy.json
