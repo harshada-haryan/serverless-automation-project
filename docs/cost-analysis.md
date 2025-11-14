@@ -3,7 +3,7 @@
 ## 📘 Overview
 
 This document explains the approximate **monthly cost** of running the **Serverless Infrastructure Automation Project** using **AWS Lambda** and **EventBridge**.  
-It is written simply so you can explain it clearly as a **Cloud Support Engineer (Fresher)**.
+
 
 ---
 
