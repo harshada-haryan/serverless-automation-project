@@ -31,9 +31,11 @@ serverless-automation-project/
 │   ├── snapshot-cleanup-schedule.json
 │   ├── resource-tagging-schedule.json
 │   └── s3-log-rotation-schedule.json
-├── docs/
+├── deployment/
 │   ├── create-iam-roles.sh
 │   └── setup-eventbridge.sh
+├── docs/
+│   └── cost-analysis.md
 ├── deploy_all.sh
 └── README.md
 
