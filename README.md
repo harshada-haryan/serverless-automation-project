@@ -318,7 +318,7 @@ The project includes an automated deployment script that handles all setup steps
 #### Step 1: Clone Repository
 ```bash
 git clone 
-cd capstone-project-3
+cd serverless-automation-project
 ```
 
 #### Step 2: Configure AWS Credentials
