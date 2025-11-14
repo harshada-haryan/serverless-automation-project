@@ -270,11 +270,11 @@ Each Lambda function has a dedicated IAM role following the principle of least p
 
 ## 🚀 Deployment Process
 
-### Deployment Overview
 
+**Complete deployment showing all Lambda functions, IAM roles, and EventBridge rules**
 <img width="1280" height="627" alt="deploy all" src="https://github.com/user-attachments/assets/a74bd2a3-7fff-4587-bbf9-ee1b0e89cec7" />
 
-*Complete deployment showing all Lambda functions, IAM roles, and EventBridge rules*
+
 
 ---
 
