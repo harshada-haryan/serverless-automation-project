@@ -198,7 +198,7 @@ This project includes 4 Lambda functions for different automation tasks:
 #### Snapshot Cleanup Schedule
 **Cron Expression:** `cron(0 3 ? *SUN*)` (every sunday at 3:00 AM UTC)
 
-*Daily snapshot cleanup schedule*
+*Weekly(sunday) snapshot cleanup schedule*
 <img width="1918" height="911" alt="eventbridge-snapshot-cleanup-schedule" src="https://github.com/user-attachments/assets/d5e4a2ce-10b7-4466-9def-25a5d994783a" />
 
 
@@ -217,7 +217,7 @@ This project includes 4 Lambda functions for different automation tasks:
 #### S3 Log Rotation Schedule
 **Cron Expression:** `cron(0 4 ? 8MON *)` (every monday at 4:00 AM UTC)
 
-*Daily S3 log rotation schedule*
+**Weekly(monday) S3 log rotation schedule*
 <img width="1913" height="902" alt="eventbridge-s3-log-rotation-schedule" src="https://github.com/user-attachments/assets/31b482ff-7b93-4230-ade8-5e0bb5c3943c" />
 
 
